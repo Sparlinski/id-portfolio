@@ -7,19 +7,30 @@ const toggleMenu = () => {
     const currentTop = parseInt(getComputedStyle(osMenu).top, 10);
 
     if (currentTop < 0) {
-        // Open the menu
         osMenu.style.top = '0';
         menuBtn.classList.add('active');
     } else {
-        // Close the menu
         osMenu.style.top = `-${menuHeight}px`;
         menuBtn.classList.remove('active');
     }
 };
 
-// Event listener for opening/closing the menu
 menuBtn.addEventListener('click', toggleMenu);
 osMenuBtn.addEventListener('click', toggleMenu);
 
+/* VIDEO AUTO PLAY FUNCTION */
 
+document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById('project_vid');
+
+    const playVid = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && video.paused) {
+                video.play();
+            }
+        });
+    });
+
+    playVid.observe(video);
+});
 
