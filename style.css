@@ -12,7 +12,6 @@ body {
     font-family: "Comfortaa", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -31,6 +30,7 @@ header  {
     background-color: #ffffff;
     border: 2px solid #060715;
     border-style: none solid none none;
+    margin: .5em .5em;
 }
 
 .main_h_container {
@@ -47,10 +47,11 @@ h1.main_h {
 
 .menu_btn {
     position: fixed;
-    margin-left: 80%;
-    top: .5em;
+    margin-left: 78%;
+    top: 1em;
     height: 2.5em;
     width: 3em;
+    z-index: 1;
 }
 
 .menu_btn span {
@@ -126,6 +127,20 @@ a:hover {
 main {
     padding: 0 1em;
     flex-grow: 1;
+    background-color: #f5f5f5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    section > img.project_slide_pop {
+        scale: .6; opacity: 0;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry 100px;
+    }   
+}
+
+@keyframes fade-in {
+    to {scale: 1; opacity: 1;}
 }
 
 .project_img_link {
@@ -139,7 +154,7 @@ main {
     display: block;
 }
 
-.project_title {
+.project_tag {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
@@ -187,16 +202,49 @@ footer {
 /*  */
 /*  */
 
+.project_section {
+    text-align: center;
+}
+
+.project_title  {
+    display: inline-block;
+    padding: .5em;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.project_p {
+    font-weight: 400;
+    font-size: .75rem;
+    text-wrap: pretty;
+    color: #808080;
+    margin: 1em 0;
+}
+
+.project_slide {
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+}
+
 .auto_play_vid {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    margin: 1em 0;
 }
 
-#project_vid {
+#project_vid_cut {
+    width: 100%;
+}
+
+#project_vid_grind {
     width: 180%;
 }
 
-.auto_play_marker {
-    height: 100vh;
+#project_vid_weld {
+    width: 180%;
 }
+
