@@ -28,13 +28,13 @@ body {
 header  {
     display: flex;
     background-color: #ffffff;
-    border: 2px solid #060715;
+    border: 1px solid #060715;
     border-style: none solid none none;
     margin: .5em .5em;
 }
 
 .main_h_container {
-    border: 2px solid #060715;
+    border: 1px solid #060715;
     border-style: none none solid solid;
     padding: 1em;
     width: 70%;
@@ -47,11 +47,13 @@ h1.main_h {
 
 .menu_btn {
     position: fixed;
-    margin-left: 78%;
+    margin-left: 75%;
     top: 1em;
-    height: 2.5em;
+    height: 3em;
     width: 3em;
     z-index: 1;
+    background-color: #ffffff;
+    border-radius: 50%;
 }
 
 .menu_btn span {
@@ -194,11 +196,11 @@ footer {
 }
 
 .project_title  {
-    display: inline-block;
+    display: block;
     padding: .5em;
     border: 3px solid #ffffff;
     border-radius: 10px;
-    margin: 1em auto;
+    margin: 1em 0 0 0;
 }
 
 .project_phase  {
@@ -208,6 +210,14 @@ footer {
     margin: 2em -1rem;
     border: 2px solid #808080;
     border-style: solid none solid none;
+}
+
+.project_line_tag {
+    font-weight: 400;
+    font-size: .75rem;
+    text-wrap: pretty;
+    color: #808080;
+    margin: 1em 0 3em 0; 
 }
 
 .project_p {
