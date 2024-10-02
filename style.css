@@ -198,8 +198,16 @@ footer {
     padding: .5em;
     border: 3px solid #ffffff;
     border-radius: 10px;
-    margin: auto;
-    margin-top: 2em;
+    margin: 1em auto;
+}
+
+.project_phase  {
+    display: block;
+    padding: 1em;
+    background-color: #ffffff;
+    margin: 2em -1rem;
+    border: 2px solid #808080;
+    border-style: solid none solid none;
 }
 
 .project_p {
@@ -220,27 +228,27 @@ footer {
     margin: 1em 0;
 }
 
-.auto_play_vid {
+.video_container {
     display: flex;
     justify-content: center;
+    width: 100%;
     overflow: hidden;
-    margin: 1em 0;
 }
 
-#project_vid_cut {
+.auto_play_vid {
     width: 100%;
 }
 
-#project_vid_grind {
+.auto_play_vid.weld,
+.auto_play_vid.grind {
     width: 180%;
 }
 
-#project_vid_weld {
-    width: 180%;
-}
-
-#project_vid_schier {
-    width: 100%;
+.site_link {
+    display: inline-block;
+    border: 2px solid #ffffff;
+    padding: 1em;
+    border-radius: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
