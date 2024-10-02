@@ -210,6 +210,10 @@ footer {
     margin: 1em 0;
 }
 
+.project_p.slide_p {
+    margin: 0 0 2.5em 0;
+}
+
 .project_slide {
     display: block;
     width: 100%;
@@ -235,16 +239,52 @@ footer {
     width: 180%;
 }
 
+#project_vid_schier {
+    width: 100%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-    section > img.project_slide_pop {
-        scale: .6; opacity: 0;
+    section > img.project_slide.pop {
+        scale: .8; opacity: 0;
         animation: fade-in linear forwards;
         animation-timeline: view();
-        animation-range: entry 100px;
+        animation-range: entry 50px;
     }   
 }
 
 @keyframes fade-in {
     to {scale: 1; opacity: 1;}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    section > img.project_slide.right_slide{
+        transform: translateX(100%);
+        animation: slide-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry 50px;
+    }   
+}
+
+@keyframes slide-in {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    section > img.project_slide.left_slide{
+        transform: translateX(100%);
+        animation: slide-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry 50px;
+    }   
+}
+
+@keyframes slide-in {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
