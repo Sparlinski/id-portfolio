@@ -203,6 +203,14 @@ footer {
     margin: 1em 0 0 0;
 }
 
+.product_type  {
+    display: block;
+    padding: .5em;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    margin: 4em 0 0 0;
+}
+
 .project_phase  {
     display: block;
     padding: 1em;
