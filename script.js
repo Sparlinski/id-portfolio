@@ -24,8 +24,10 @@ osMenuBtn.addEventListener('click', toggleMenu);
 
 const backToTop = document.querySelector('.to_top');
 
-backToTop.onclick = function(e) {
+if (backToTop) {
+    backToTop.onclick = function(e) {
     e.preventDefault();
     window.scrollTo({top: 0, behavior: 'smooth'});
+    }
 };
 
