@@ -270,6 +270,19 @@ footer {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+    section > img.project_img.pop {
+        scale: .8; opacity: 0;
+        animation: pop-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry 50px;
+    }   
+}
+
+@keyframes pop-in {
+    to {scale: 1; opacity: 1;}
+}
+
+@media (prefers-reduced-motion: no-preference) {
     section > img.project_slide.pop {
         scale: .8; opacity: 0;
         animation: fade-in linear forwards;
