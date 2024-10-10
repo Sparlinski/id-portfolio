@@ -269,6 +269,12 @@ footer {
     border-radius: 10px;
 }
 
+.embeded_video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    margin: 1em 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     section > img.project_img.pop {
         scale: .8; opacity: 0;
