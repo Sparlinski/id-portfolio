@@ -31,3 +31,15 @@ if (backToTop) {
     }
 };
 
+/* SCROLL ONLY MENU BUTTON */
+
+document.addEventListener('scroll', function() {
+    if (window.innerWidth >= 768) {
+        if (window.scrollY > 100) {
+            menuBtn.style.display = 'block';
+        } else {
+            menuBtn.style.display = 'none'
+        }
+    }
+});
+

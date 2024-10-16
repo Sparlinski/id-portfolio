@@ -8,3 +8,30 @@ black - #060715
 FONT
 
 Comfortaa, sans-serif
+
+SCREEN SIZES
+
+/* Extra small devices (phones, 320px and up) */
+@media (min-width: 320px) {
+    /* styles */
+}
+
+/* Small devices (tablets, 600px and up) */
+@media (min-width: 600px) {
+    /* styles */
+}
+
+/* Medium devices (laptops, 768px and up) */
+@media (min-width: 768px) {
+    /* styles */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* styles */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* styles */
+}
