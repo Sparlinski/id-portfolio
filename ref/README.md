@@ -76,3 +76,37 @@ project template html
 </body>
 <script src="../script.js"></script>
 </html>
+
+ANIMATION PROTOTYPES
+
+@media (prefers-reduced-motion: no-preference) {
+    section > img.project_slide.right_slide{
+        transform: translateX(100%);
+        animation: slide-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry 50px;
+    }   
+}
+
+@keyframes slide-in {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    section > img.project_slide.left_slide{
+        transform: translateX(100%);
+        animation: slide-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry 50px;
+    }   
+}
+
+@keyframes slide-in {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
