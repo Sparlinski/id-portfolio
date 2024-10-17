@@ -60,7 +60,7 @@ h1.main_h {
 .menu_btn {
     position: fixed;
     right: 5%;
-    top: 1em;
+    top: 2.5vh;
     width: 12vw;
     max-width: 60px;
     aspect-ratio: 1;
@@ -107,7 +107,7 @@ h1.main_h {
     flex-direction: column;
     color: #060715;
     gap: 2em;
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 2vw, 2rem);
     margin-bottom: 4em;
 }
 
@@ -134,7 +134,6 @@ a:hover {
 /* RESPONSIVE VALUES */
 
 @media (max-width: 350px) {
-    
     h1.main_h {
         font-size: clamp(.8rem, 1.5vw, 1.5rem);
         font-weight: bold;
@@ -144,11 +143,9 @@ a:hover {
     .menu_btn {
         min-width: 4vh;
     }
-
 }
 
 @media (min-width: 768px) {
-    
     .menu_btn {
         display: none;
     }
@@ -163,14 +160,26 @@ a:hover {
         margin-right: 2em;
         padding: 1em;
     }
+}
+
+@media (min-width: 2500px) {
+    h1.main_h {
+        font-size: clamp(3rem, 6vw, 6rem);
+        padding: .25em;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .menu_items.onscreen_items {
+        font-size: clamp(1.5rem, 3vw, 3rem);
+    }
 
 }
 
-
 /*  */
 /*  */
 /*  */
-            /* MAIN */
+            /* INDEX MAIN */
 /*  */
 /*  */
 /*  */
@@ -185,7 +194,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: auto;
+        margin: 5vw;
 }
 
 .project_img_link {
@@ -215,10 +224,10 @@ main {
 .to_top {
     display: block;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-bottom: 2em;
     padding: 1em 2em;
-    border-radius: 30px;
+    border-radius: 25px;
     border: 2px solid #808080;
     color: #808080;
     font-size: clamp(1rem, 2vw, 3rem);
@@ -258,6 +267,49 @@ main {
 
 }
 
+@media (min-width: 1450px) {
+    
+    .project_img_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2vw;
+    
+    }
+
+    .project_tag {
+        font-size: clamp(1rem, 1.25vw, 1.25rem);
+    }
+}
+
+@media (min-width: 2500px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project_img_container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        padding: 1vw;
+        margin: 0;
+        gap: 1vw;
+    }
+
+    .to_top {
+        display: none;
+    }
+
+    .project_tag {
+        font-size: clamp(1.25rem, 3vw, 3rem);
+    }
+
+}
+
+
+
 
 /*  */
 /*  */
@@ -296,7 +348,7 @@ footer {
 /*  */
 /*  */
 /*  */
-            /* PROJECT PAGE */
+            /* PROJECT PAGE MAIN */
 /*  */
 /*  */
 /*  */
@@ -326,7 +378,7 @@ footer {
     display: block;
     padding: 1em;
     background-color: #ffffff;
-    margin: 2em -5vw;
+    margin: 4em -5vw 2em -5vw;
     border: 2px solid #808080;
     border-style: solid none solid none;
 }
@@ -344,7 +396,11 @@ footer {
     font-size: .75rem;
     text-wrap: pretty;
     color: #808080;
-    margin: 1em 0;
+    margin: 1em 0 4em 0;
+}
+
+.project_p.intro {
+    margin: 2em 0;   
 }
 
 .project_p.slide_p {
@@ -370,7 +426,7 @@ footer {
 
 .auto_play_vid.weld,
 .auto_play_vid.grind {
-    width: 180%;
+    object-fit: contain;
 }
 
 .site_link {
@@ -380,7 +436,7 @@ footer {
     border-radius: 10px;
 }
 
-.embeded_video {
+#embeded_video {
     aspect-ratio: 16 / 9;
     width: 100%;
     margin: 1em 0;
@@ -422,12 +478,17 @@ footer {
     
     .project_title  {
         padding: .5em 4em;
-        font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+        font-size: clamp(1.5rem, 2.75vw, 2.75rem);
         margin-top: 1.5em;
+    }
+
+    .product_type  {
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+        margin: 6em 0 0 0;
     }
     
     .project_phase  {
-        margin: 2em -15vw;
+        margin: 6em -15vw 2em -15vw;
         font-size: clamp(1.5rem, 2vw, 2rem);
     }
     
@@ -438,7 +499,6 @@ footer {
     
     .project_p {
         font-size: clamp(1rem, 1.25vw, 1.25rem);
-        margin: 2em 0;
     }
     
     .project_p.slide_p {
@@ -464,8 +524,9 @@ footer {
     }
     
     .auto_play_vid.weld,
-    .auto_play_vid.grind {
-        width: 180%;
+    .auto_play_vid.grind,
+    auto_play_vid.grind {
+        object-fit: contain;
     }
     
     .site_link {

@@ -35,3 +35,8 @@ SCREEN SIZES
 @media (min-width: 1200px) {
     /* styles */
 }
+
+/* Ultra wide devices (large desktops, 2500px and up) */
+@media (min-width: 1200px) {
+    /* styles */
+}
