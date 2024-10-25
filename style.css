@@ -620,7 +620,7 @@ footer {
     }
     
     .logo_img {
-        width: 60%;
+        width: 50%;
     }
     
     .client_logos_container {
@@ -656,7 +656,7 @@ footer {
     }
     
     .logo_img {
-        width: 60%;
+        width: 50%;
     }
     
     .client_logos_container {
@@ -666,6 +666,46 @@ footer {
     }
     
 }
+
+/*  */
+/*  */
+/*  */
+        /* CONTACT */
+/*  */
+/*  */
+/*  */
+
+.contact_card {
+    padding: 2em;
+}
+
+
+
+.contact_h {
+    font-weight: 400;
+    margin: 3em 0;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.contact_type {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-weight: 400;
+    margin-bottom: 2em;
+}
+
+.contact_info {
+    display: block;
+    color: #808080;
+    margin-top: .5em;
+}
+
+
+
+
+
+
+
+
 
 
 
