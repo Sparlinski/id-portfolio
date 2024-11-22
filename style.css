@@ -321,7 +321,7 @@ main {
 
 footer {
     width: 100%;
-    padding: 2em 1em;
+    padding: 2em 4em;
     background-color: #060715;
 }
 
@@ -334,13 +334,8 @@ footer {
 
 @media (min-width: 768px) {
 
-    footer {
-        padding: 4em 1em;
-    }
-
     .footer_p {
-        font-size: clamp(1rem, 1.25vw, 1.25rem);
-        color: #ffffff;
+        font-size: 1rem
     }
 
 }
@@ -473,7 +468,7 @@ footer {
 
 @media (min-width: 768px) {
     .project_section {
-        padding: 0 15vw;
+        padding: 0 20vw;
     }
     
     .project_title  {
@@ -488,7 +483,7 @@ footer {
     }
     
     .project_phase  {
-        margin: 6em -15vw 2em -15vw;
+        margin: 6em -20vw 2em -20vw;
         font-size: clamp(1.5rem, 2vw, 2rem);
     }
     
