@@ -5,20 +5,23 @@ const osMenuBtn = document.querySelector('.os_menu_btn');
 const osMenu = document.querySelector('.os_menu');
 
 const toggleMenu = () => {
+    // Recalculate menu height dynamically
     const menuHeight = parseInt(getComputedStyle(osMenu).height, 10);
     const currentTop = parseInt(getComputedStyle(osMenu).top, 10);
 
     if (currentTop < 0) {
-        osMenu.style.top = '0';
+        osMenu.style.top = '0'; // Show menu
         menuBtn.classList.add('active');
     } else {
-        osMenu.style.top = `-${menuHeight}px`;
+        osMenu.style.top = `-${menuHeight}px`; // Hide menu
         menuBtn.classList.remove('active');
     }
 };
 
+// Add separate event listeners as in the original code
 menuBtn.addEventListener('click', toggleMenu);
 osMenuBtn.addEventListener('click', toggleMenu);
+
 
 /* BACK TO TOP FUNCTION */
 
