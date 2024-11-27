@@ -87,7 +87,7 @@ h1.main_h {
 
 .os_menu {
     position: fixed;
-    top: -100%;
+    top: -100vh;
     left: 0;
     width: 100%;
     max-width: 100%;
