@@ -694,6 +694,10 @@ footer {
     margin-top: .5em;
 }
 
+.link_color:hover {
+    color: #060715;
+}
+
 
 
 
